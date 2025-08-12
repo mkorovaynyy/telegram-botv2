@@ -27,7 +27,6 @@ public class NotificationSenderService {
     @Scheduled(fixedRate = 30_000)
     public void sendScheduledNotifications() {
         LocalDateTime now = LocalDateTime.now();
-        // Исправлено: добавлен второй аргумент NotificationStatus.PENDING
         List<NotificationTask> tasks = repository.findPendingTasks(NotificationStatus.PENDING, now);
 
         if (tasks.isEmpty()) {

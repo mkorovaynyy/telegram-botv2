@@ -24,7 +24,6 @@ public class NotificationTask {
     @Column(nullable = false)
     private NotificationStatus status = NotificationStatus.PENDING;
 
-    // Конструкторы, геттеры и сеттеры
 
     public NotificationTask() {
     }
@@ -35,7 +34,7 @@ public class NotificationTask {
         this.notificationDateTime = notificationDateTime;
     }
 
-    // Геттеры и сеттеры
+
     public Long getId() {
         return id;
     }
